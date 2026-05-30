@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="mt-4">API Usage History</h1>
+        
+        {% if history %}
+            <table class="table table-striped mt-4">
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Request</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for entry in history %}
+                        <tr>
+                            <td>{{ entry.timestamp }}</td>
+                            <td>
+                                {% if entry.request.news_text %}
+                                    Text: {{ entry.request.news_text }}
+                                {% elif entry.request.news_link %}
+                                    Link: <a href="{{ entry.request.news_link }}">{{ entry.request.news_link }}</a>
+                                {% endif %}
+                            </td>
+                            <td>{{ entry.result }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No history available.</p>
+        {% endif %}
+        
+        {% if error %}
+            <p class="text-danger">{{ error }}</p>
+        {% endif %}
+    </div>
+{% endblock %}

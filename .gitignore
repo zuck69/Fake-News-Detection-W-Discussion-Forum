@@ -1,0 +1,9 @@
+# Ignore heavy machine learning files
+*.pkl
+*.csv
+machine learning/*.csv
+
+# Python cache and environments
+__pycache__/
+.venv/
+app.db
