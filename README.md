@@ -45,8 +45,10 @@ To prevent algorithmic overfitting and ensure the multi-classifier ensemble coul
 
 ### Local Configuration
 To run training sequences locally, download the dataset from the Kaggle source above and place the uncompressed `.csv` file into your local directory structure as follows:
+
 ```text
 machine_learning/WELFake_Dataset.csv
+```
 
 ---
 
