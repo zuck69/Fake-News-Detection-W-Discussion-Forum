@@ -22,6 +22,32 @@ By pairing predictive analytics with an active discussion ecosystem, this platfo
 * **User Engagement Ecosystem:** Full support for thread creation, commenting, and user-driven discussions to leverage collective intelligence against misinformation.
 * **Database & Migrations:** Powered by a robust relational schema with version-controlled database migrations (`migrations/`) ensuring seamless state management.
 
+  ---
+
+## 📂 Dataset Overview & Ingestion
+
+This platform's predictive engine was built and evaluated using the **WELFake Dataset**, a premier, large-scale benchmarks corpus designed specifically for robust fake news classification.
+
+* **Dataset Source:** [Kaggle - Fake News Classification (WELFake)](https://www.kaggle.com/datasets/saurabhshahane/fake-news-classification)
+* **Total Records:** 72,134 serialized news articles
+  * **Real News Samples:** 35,028 entries
+  * **Fake News Samples:** 37,106 entries
+* **Target Vector / Classification Labels:**
+  * `0` = **Fake News**
+  * `1` = **Real News**
+
+### Multi-Corpus Generalization
+To prevent algorithmic overfitting and ensure the multi-classifier ensemble could identify structural patterns across different types of journalism, the underlying dataset synthesizes data across four major public corpora:
+1. **Reuters** (Traditional news structures)
+2. **Kaggle Fake News Corpus**
+3. **McIntire Dataset**
+4. **BuzzFeed Political** (Highly dynamic clickbait/viral news structures)
+
+### Local Configuration
+To run training sequences locally, download the dataset from the Kaggle source above and place the uncompressed `.csv` file into your local directory structure as follows:
+```text
+machine_learning/WELFake_Dataset.csv
+
 ---
 
 ## 🛠️ Installation & Environment Setup
