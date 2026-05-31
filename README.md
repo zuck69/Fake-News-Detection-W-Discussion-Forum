@@ -22,7 +22,7 @@ By pairing predictive analytics with an active discussion ecosystem, this platfo
 * **User Engagement Ecosystem:** Full support for thread creation, commenting, and user-driven discussions to leverage collective intelligence against misinformation.
 * **Database & Migrations:** Powered by a robust relational schema with version-controlled database migrations (`migrations/`) ensuring seamless state management.
 
-  ---
+---
 
 ## 📂 Dataset Overview & Ingestion
 
